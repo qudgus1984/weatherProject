@@ -15,6 +15,7 @@ import CoreLocation
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
@@ -34,6 +35,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         locationManager.delegate = self
         
@@ -112,6 +114,8 @@ class ViewController: UIViewController {
         locationLabel.layer.masksToBounds = true
         locationLabel.layer.cornerRadius = 10
         locationLabel.backgroundColor = .white
+        
+        
     }
 }
 

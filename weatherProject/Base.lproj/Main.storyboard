@@ -16,10 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jl-M6-Gvg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunset-4086848_1920" translatesAutoresizingMaskIntoConstraints="NO" id="X2s-ny-dwe">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" red="1" green="0.72938176967668866" blue="0.65315594644207031" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ld7-f8-vix">
                                 <rect key="frame" x="20" y="64" width="374" height="20"/>
                                 <constraints>
@@ -81,8 +80,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7jl-M6-Gvg" secondAttribute="trailing" id="1EX-ON-iFS"/>
+                            <constraint firstAttribute="bottom" secondItem="X2s-ny-dwe" secondAttribute="bottom" id="03V-3G-qEE"/>
                             <constraint firstItem="SCS-k6-XOq" firstAttribute="top" secondItem="ld7-f8-vix" secondAttribute="bottom" constant="20" id="46K-IE-QDD"/>
+                            <constraint firstItem="X2s-ny-dwe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6zZ-aF-9fv"/>
                             <constraint firstItem="NsG-J7-35a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="88z-a3-eX8"/>
                             <constraint firstItem="Rsu-aW-EOY" firstAttribute="top" secondItem="NsG-J7-35a" secondAttribute="bottom" constant="20" id="Gag-7j-9LV"/>
                             <constraint firstItem="9Dl-NF-Hfz" firstAttribute="top" secondItem="Rsu-aW-EOY" secondAttribute="bottom" constant="20" id="HTD-50-Lqb"/>
@@ -96,11 +96,10 @@
                             <constraint firstItem="Rsu-aW-EOY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="b1S-HL-Hgr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SCS-k6-XOq" secondAttribute="trailing" constant="20" id="c1T-qN-s9J"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="o2u-gM-npD" secondAttribute="trailing" constant="20" id="eNK-wJ-6fE"/>
-                            <constraint firstAttribute="bottom" secondItem="7jl-M6-Gvg" secondAttribute="bottom" id="f1T-gR-uR2"/>
                             <constraint firstItem="NsG-J7-35a" firstAttribute="top" secondItem="SCS-k6-XOq" secondAttribute="bottom" constant="20" id="gz0-pt-y4g"/>
                             <constraint firstItem="o2u-gM-npD" firstAttribute="top" secondItem="oCp-48-PyU" secondAttribute="bottom" constant="20" id="hEj-ng-DsV"/>
-                            <constraint firstItem="7jl-M6-Gvg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kFl-CW-fXN"/>
-                            <constraint firstItem="7jl-M6-Gvg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mk7-Fg-aIv"/>
+                            <constraint firstItem="X2s-ny-dwe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kGE-sy-bQs"/>
+                            <constraint firstItem="X2s-ny-dwe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pnJ-2H-8eD"/>
                             <constraint firstItem="o2u-gM-npD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qA1-t3-h7u"/>
                             <constraint firstItem="9Dl-NF-Hfz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qak-37-460"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9Dl-NF-Hfz" secondAttribute="trailing" constant="20" id="tqr-7v-Y2t"/>
@@ -110,6 +109,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImageView" destination="X2s-ny-dwe" id="zpe-ti-sxT"/>
                         <outlet property="dateLabel" destination="ld7-f8-vix" id="5ml-jh-ZF7"/>
                         <outlet property="humidityLabel" destination="Rsu-aW-EOY" id="TQF-CF-Akv"/>
                         <outlet property="locationLabel" destination="SCS-k6-XOq" id="z4b-Jk-xS0"/>
@@ -125,6 +125,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="sunset-4086848_1920" width="1920" height="1276"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
